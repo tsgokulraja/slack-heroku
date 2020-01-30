@@ -12,5 +12,6 @@ app.use(
 const port = process.env.PORT || 4001;
 server.listen(port, () => console.log(`Listening on port ${port}`));
 app.post("/",(request,response)=>{
-    response.send(request.body.challenge)
+    response.send({
+      "challenge":request.body.challenge})
 })
