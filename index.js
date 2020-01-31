@@ -11,6 +11,9 @@ app.use(
 );
 const port = process.env.PORT || 4001;
 server.listen(port, () => console.log(`Listening on port ${port}`));
+app.get("/",(req,res)=>{
+    res.send(<h1>Hello</h1>)
+})
 app.post("/",(request,response)=>{
   console.log(request);
     response.send({
