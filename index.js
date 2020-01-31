@@ -13,7 +13,7 @@ const port = process.env.PORT || 4001;
 server.listen(port, () => console.log(`Listening on port ${port}`));
 
 app.post("/",(request,response)=>{
-  app.post("http://localhost:4001",request.body);
+//   app.post("http://localhost:4001",request.body);
   console.log(request.body);
     response.send({
       "challenge":request.body.challenge})
